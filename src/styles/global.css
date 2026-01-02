@@ -19,3 +19,34 @@ body {
 .font-display {
     font-family: "Cormorant Garamond", serif;
   }
+
+  .hero-bg {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hero-bg::before {
+    content: "";
+    position: absolute;
+    inset: -30%;
+    background: radial-gradient(
+      circle,
+      rgba(255,255,255,0.06) 0%,
+      rgba(255,255,255,0.03) 35%,
+      transparent 70%
+    );
+    animation: breathe 18s ease-in-out infinite;
+    pointer-events: none;
+  }
+  
+  @keyframes breathe {
+    0%, 100% {
+      transform: scale(0.95);
+      opacity: 0.6;
+    }
+    50% {
+      transform: scale(1.05);
+      opacity: 1;
+    }
+  }
+  
