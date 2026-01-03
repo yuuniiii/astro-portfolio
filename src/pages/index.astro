@@ -1,22 +1,23 @@
 ---
 import BaseLayout from "../layouts/baselayout.astro";
-import ProjectRow from "../components/projectrow.astro";
+import ProjectFolder from "../components/projectfolder.astro";
 ---
 
 <BaseLayout title="Yuni Portfolio">
   <main class="mx-auto max-w-5xl px-6 py-24">
-    <section class="hero-bg rounded-2xl p-8">
-		<h1 class="text-4xl font-semibold tracking-tight">
-		  Hi! I’m Yuni.
+    <section class="rounded-2xl p-8">
+		<h1 class="text-5xl font-semibold tracking-tight">
+		  Hi, I’m Yuni!
 		</h1>
   
-		<p class="mt-6 text-lg text-neutral-400">
-		  Learning about human-computer interaction through projects at FlashGrub and Columbia.
+		<p class="font-medium mt-6 text-2xl text-neutral-400 leading-[1.62]">
+		  Lead Product Intern at FlashGrub <br> Human-Computer Interaction student at Columbia University
 		</p>
 	  </section>
 
     <section class="mt-20 space-y-8">
-      <ProjectRow
+      <ProjectFolder
+        tab="Current Project"
         title="FlashGrub App"
         description="Creating prototypes to implement subscription models and refine app flows."
         imageSrc="/images/fgprototype.png"
@@ -24,16 +25,17 @@ import ProjectRow from "../components/projectrow.astro";
         meta="Figma · Ongoing"
       />
 
-      <ProjectRow
+      <ProjectFolder
+        tab=" "
         title="Furniture Flow App"
         description="Prototype for furniture and resale delivery app."
         imageSrc="/images/ffprototype.png"
         href="/projects/duolingo"
         meta="Figma · Fall 2025"
-		reverse
       />
 
-      <ProjectRow
+      <ProjectFolder
+        tab=" "
         title="Coffee Shop Ordering Platform"
         description="Online ordering platform for the campus coffee shop, The Green Bean."
         imageSrc="/images/gbprototype.png"
