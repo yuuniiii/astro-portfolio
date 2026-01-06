@@ -1,15 +1,15 @@
 ---
-const { tab, title, description, imageSrc, href, meta } = Astro.props;
+const { tab, title, description, imageSrc, href, meta, bgClass = "bg-neutral-900", borderClass = "border-neutral-700" } = Astro.props;
 ---
 
 <a href={href} class="block group relative mt-20">
   <!-- Tab -->
   <div class="absolute -top-7 left-10 z-10">
     <div
-      class="px-8 py-2 text-base font-semibold
-             bg-neutral-900 text-neutral-300
-             border border-neutral-700 border-b-0
-             rounded-t-lg"
+      class={`px-8 py-2 text-base font-semibold
+          ${bgClass} text-neutral-300
+          border ${borderClass} border-b-0
+          rounded-t-lg`}
     >
       {tab}
     </div>
@@ -17,10 +17,10 @@ const { tab, title, description, imageSrc, href, meta } = Astro.props;
 
   <!-- Folder body -->
   <div
-    class="rounded-xl border border-neutral-700
-           bg-neutral-900 p-10
-           transition-transform duration-300
-           group-hover:-translate-y-1"
+    class={`rounded-xl border ${borderClass}
+          ${bgClass} p-10
+          transition-transform duration-300
+          group-hover:-translate-y-1`}
   >
     <div class="grid gap-10 sm:grid-cols-2 items-center">
 
