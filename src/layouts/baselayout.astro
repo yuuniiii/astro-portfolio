@@ -34,8 +34,15 @@ const { title, description } = Astro.props;
     <slot />
 
     <!-- footer -->
-    <footer class="mx-auto max-w-3xl px-6 py-8 text-sm text-neutral-500">
-      Made with care (and Astro) © {new Date().getFullYear()} Yunyoung Chun
+    <footer class="border-t border-white/10">
+      <div class="mx-auto max-w-3xl px-6 py-20 text-sm text-neutral-500">
+        <div class = "text-xl font-bold mb-2 text-neutral-300">
+          Thanks for stopping by :)
+        </div>
+        <div>
+          Made with care (and Astro) © {new Date().getFullYear()} Yunyoung Chun
+        </div>
+      </div>
     </footer>
   </body>
 </html>
