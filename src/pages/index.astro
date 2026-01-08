@@ -23,7 +23,7 @@ import ProjectFolder from "../components/projectfolder.astro";
 		</p>
 	  </section>
 
-    <section class="mt-20 space-y-8">
+    <section class="mt-32 relative space-y-[17vh]">
       <ProjectFolder
         tab="             "
         title="FlashGrub App"
@@ -33,6 +33,7 @@ import ProjectFolder from "../components/projectfolder.astro";
         meta="Figma · Ongoing"
         bgClass="bg-[#2a232e]"
         borderClass="border-[#5b4473]"
+        style="z-index: 10"
       />
 
       <ProjectFolder
@@ -44,6 +45,7 @@ import ProjectFolder from "../components/projectfolder.astro";
         meta="Figma · Fall 2025"
         bgClass="bg-[#23232e]"
         borderClass="border-[#444573]"
+        style="z-index: 20"
       />
 
       <ProjectFolder
@@ -55,7 +57,9 @@ import ProjectFolder from "../components/projectfolder.astro";
         meta="Figma · Fall 2024"
         bgClass="bg-[#242e23]"
         borderClass="border-[#497344]"
+        style="z-index: 30"
       />
+      <div class="h-[7vh]"></div>
     </section>
   </main>
 </BaseLayout>
