@@ -1,0 +1,265 @@
+---
+import BaseLayout from "../layouts/baselayout.astro";
+---
+
+<BaseLayout title="Furniture Flow Case Study">
+  <main class="mx-auto max-w-3xl px-6 py-24 space-y-20">
+    <!-- Header -->
+    <section class="space-y-6">
+      <p class="text-sm uppercase tracking-wide text-neutral-500">
+        Case Study
+      </p>
+
+      <h1 class="text-5xl font-semibold leading-tight">
+        Furniture Flow
+      </h1>
+
+      <p class="text-xl text-neutral-400 leading-relaxed">
+        Designing a campus-first resale & delivery platform for urban students.
+      </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-6 text-sm">
+        <div>
+          <p class="uppercase tracking-wide text-neutral-500">Role</p>
+          <p class="mt-1 text-neutral-200">
+            Product Manager & Product Designer <span class="text-neutral-400">(solo)</span>
+          </p>
+        </div>
+
+        <div>
+          <p class="uppercase tracking-wide text-neutral-500">Timeline</p>
+          <p class="mt-1 text-neutral-200">Academic term project</p>
+        </div>
+
+        <div>
+          <p class="uppercase tracking-wide text-neutral-500">Focus</p>
+          <p class="mt-1 text-neutral-200">
+            Trust, resale flows, optional logistics
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hero Image / Prototype -->
+    <section class="space-y-4">
+      <h2 class="text-2xl font-semibold">Prototype</h2>
+
+      <!-- Replace src with your image path -->
+      <figure class="space-y-2">
+        <img
+          src="/images/furniture-flow-prototype.png"
+          alt="Furniture Flow prototype screens showing login, account creation, listing flow, browse feed, and item detail."
+          class="w-full rounded-xl border border-neutral-800"
+          loading="lazy"
+        />
+        <figcaption class="text-sm text-neutral-500">
+          Early-to-late flow screens: onboarding → listing → browsing → item view.
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- Context -->
+    <section class="space-y-6">
+      <h2 class="text-2xl font-semibold">Context</h2>
+      <p class="text-neutral-300 leading-relaxed">
+        Furniture Flow is a mobile app concept designed to help college students in the NYC area
+        buy, sell, and move secondhand furniture. The platform combines resale, discovery, and
+        optional delivery or short-term storage into a single student-verified marketplace.
+      </p>
+      <p class="text-neutral-300 leading-relaxed">
+        This project was developed as part of a design course. The goal wasn’t to build a full product,
+        but to think through how a real marketplace could work end-to-end — from user motivation to
+        interface decisions to operational constraints.
+      </p>
+    </section>
+
+    <!-- Problem -->
+    <section class="space-y-6">
+      <h2 class="text-2xl font-semibold">Problem Space</h2>
+      <p class="text-neutral-300 leading-relaxed">
+        College students frequently resell furniture during move-in, move-out, and housing transitions.
+        Through initial research and observation, a few pain points showed up repeatedly:
+      </p>
+
+      <ul class="list-disc list-inside text-neutral-300 space-y-2">
+        <li>Listings are scattered across platforms like Facebook Marketplace, Craigslist, and group chats</li>
+        <li>Transactions require manual coordination for pickup, transport, and timing</li>
+        <li>Trust is inconsistent, especially in dense urban environments</li>
+        <li>Delivery and temporary storage are difficult to arrange independently</li>
+      </ul>
+
+      <p class="text-neutral-300 leading-relaxed">
+        In NYC, these issues are amplified by limited access to cars, small living spaces, and fast housing turnover.
+      </p>
+    </section>
+
+    <!-- Research -->
+    <section class="space-y-6">
+      <h2 class="text-2xl font-semibold">Research & Inspiration</h2>
+      <p class="text-neutral-300 leading-relaxed">
+        Before designing, I referenced existing marketplace platforms — especially
+        <span class="text-neutral-200 font-medium">Facebook Marketplace</span> and
+        <span class="text-neutral-200 font-medium">Depop</span> — to study patterns around listing,
+        browsing, and trust.
+      </p>
+
+      <div class="space-y-3 text-neutral-300">
+        <p class="leading-relaxed">
+          <span class="text-neutral-200 font-medium">Facebook Marketplace</span> highlighted the importance of
+          local context and real identities, but also exposed friction around coordination and logistics.
+        </p>
+        <p class="leading-relaxed">
+          <span class="text-neutral-200 font-medium">Depop</span> showed how visual-first browsing and lightweight
+          categorization can make resale feel engaging and less transactional.
+        </p>
+      </div>
+
+      <p class="text-neutral-300 leading-relaxed">
+        Rather than copying features directly, I focused on understanding why certain patterns worked — and where they
+        broke down for furniture-specific use cases.
+      </p>
+    </section>
+
+    <!-- Challenge -->
+    <section class="space-y-6">
+      <h2 class="text-2xl font-semibold">Design Challenge</h2>
+      <p class="text-neutral-300 leading-relaxed">
+        The core challenge was balancing <span class="text-neutral-200 font-medium">simplicity</span> with
+        <span class="text-neutral-200 font-medium">real-world complexity</span>.
+      </p>
+      <p class="text-neutral-300 leading-relaxed">
+        Furniture resale isn’t just browsing and payment — it involves size, condition, transport, timing, and trust.
+        I wanted to acknowledge those constraints without overwhelming users.
+      </p>
+
+      <ul class="space-y-4 text-neutral-300">
+        <li>How might we make resale feel approachable for busy students?</li>
+        <li>How might we introduce logistics (delivery, storage) without making them feel mandatory?</li>
+        <li>How might we design trust into the system without heavy-handed verification?</li>
+      </ul>
+    </section>
+
+    <!-- Process -->
+    <section class="space-y-6">
+      <h2 class="text-2xl font-semibold">Process</h2>
+      <p class="text-neutral-300 leading-relaxed">
+        Early drafts were feature-heavy — I tried to solve every problem at once. Through iteration,
+        I shifted toward identifying the minimum structure needed to reduce confusion, while deferring complexity
+        until it was contextually relevant.
+      </p>
+
+      <ul class="list-disc list-inside text-neutral-300 space-y-2">
+        <li>Mapped the end-to-end journey for buyers and sellers</li>
+        <li>Marked “hesitation points” where users would likely feel uncertain</li>
+        <li>Simplified flows to reduce cognitive load during listing and browsing</li>
+        <li>Iterated incrementally screen-by-screen instead of doing full redesigns</li>
+      </ul>
+    </section>
+
+    <!-- Decisions -->
+    <section class="space-y-10">
+      <div class="space-y-4">
+        <h2 class="text-2xl font-semibold">Key Product & Design Decisions</h2>
+        <p class="text-neutral-300 leading-relaxed">
+          I approached each major interaction as both a product decision (what matters, what’s optional, what’s risky)
+          and a design decision (how to present it clearly and reduce friction).
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        <h3 class="text-xl font-medium">1. Student-Verified Onboarding</h3>
+        <p class="text-neutral-300 leading-relaxed">
+          The onboarding flow emphasizes <span class="text-neutral-200 font-medium">.edu verification</span> and university affiliation
+          (e.g., NYU, Columbia). Product-wise, this narrows the market and establishes trust. Design-wise, it frames the
+          app as a campus-specific tool rather than a generic marketplace.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        <h3 class="text-xl font-medium">2. Guided but Lightweight Listing</h3>
+        <p class="text-neutral-300 leading-relaxed">
+          Listing uses structured attributes (type, material, wear, price) while keeping the UI photo-forward.
+          This is a deliberate tradeoff: structured inputs improve consistency and browsing later, while fewer
+          required decisions reduce seller friction.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        <h3 class="text-xl font-medium">3. Browsing Designed for Exploration</h3>
+        <p class="text-neutral-300 leading-relaxed">
+          The browse experience prioritizes visual scanning and category-based exploration rather than a search-first workflow.
+          Students often browse furniture casually (between classes or while planning moves), so the design supports discovery.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        <h3 class="text-xl font-medium">4. Contextual Logistics (Not Front-and-Center)</h3>
+        <p class="text-neutral-300 leading-relaxed">
+          Delivery and storage options are introduced only when relevant (during listing or checkout), rather than positioned as
+          the core value proposition. This follows a progressive disclosure approach: advanced features should feel available,
+          not required.
+        </p>
+      </div>
+    </section>
+
+    <!-- Branding -->
+    <section class="space-y-6">
+      <h2 class="text-2xl font-semibold">Branding & Visual Direction</h2>
+      <p class="text-neutral-300 leading-relaxed">
+        I chose a restrained gradient palette and simple typography to balance approachability with credibility.
+        The visual system was designed to support clarity and reduce friction, not compete with content.
+      </p>
+
+      <ul class="list-disc list-inside text-neutral-300 space-y-2">
+        <li>Student-friendly, not scrappy</li>
+        <li>Trustworthy without feeling corporate</li>
+        <li>Clean hierarchy that keeps attention on listings and photos</li>
+      </ul>
+    </section>
+
+    <!-- Outcome -->
+    <section class="space-y-6">
+      <h2 class="text-2xl font-semibold">Outcome</h2>
+      <p class="text-neutral-300 leading-relaxed">
+        The final prototype communicates a cohesive end-to-end flow:
+      </p>
+      <ul class="list-disc list-inside text-neutral-300 space-y-2">
+        <li>Verified onboarding</li>
+        <li>Clear, structured listing flow</li>
+        <li>Visual-first browsing</li>
+        <li>Focused item detail views</li>
+        <li>Optional logistics support</li>
+      </ul>
+
+      <p class="text-neutral-300 leading-relaxed">
+        While conceptual, the process emphasized realistic constraints and tradeoffs that a real marketplace product would face.
+      </p>
+    </section>
+
+    <!-- Reflections -->
+    <section class="space-y-6">
+      <h2 class="text-2xl font-semibold">Reflections</h2>
+      <p class="text-neutral-300 leading-relaxed">
+        This project reinforced the importance of designing systems, not just screens — and using structure as a tool for clarity,
+        not control. It shifted my thinking from “what features can we add?” to “what decisions are users being asked to make, and how
+        can we make those decisions easier?”
+      </p>
+    </section>
+
+    <!-- Next Steps -->
+    <section class="space-y-6">
+      <h2 class="text-2xl font-semibold">If I Had More Time</h2>
+      <ul class="list-disc list-inside text-neutral-300 space-y-2">
+        <li>Test the listing flow with students to validate which fields feel essential vs. annoying</li>
+        <li>Refine how delivery/storage eligibility is communicated (clear, optional, non-salesy)</li>
+        <li>Add trust signals on listings (campus proximity, seller history, verification badges)</li>
+      </ul>
+    </section>
+
+    <!-- Footer Note -->
+    <section class="border border-neutral-800 rounded-lg p-6 text-sm text-neutral-400">
+      <strong class="text-neutral-300">Note</strong><br />
+      This is a conceptual class project. The prototype focuses on product reasoning, flow design, and interaction clarity rather than implementation.
+    </section>
+  </main>
+</BaseLayout>
