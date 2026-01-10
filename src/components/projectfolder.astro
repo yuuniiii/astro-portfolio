@@ -7,7 +7,7 @@ const { tab, title, description, imageSrc, href, meta, bgClass = "bg-neutral-900
     class="block group relative sticky top-24"
     style={style}>
   <!-- Tab -->
-  <div class="absolute -top-7 left-10 z-10">
+  <div class="absolute -top-5 left-10 z-10">
     <div
       class={`px-37 py-2 text-base font-semibold
           ${bgClass} text-neutral-300
@@ -33,7 +33,7 @@ const { tab, title, description, imageSrc, href, meta, bgClass = "bg-neutral-900
         <img
           src={imageSrc}
           alt={title}
-          class="max-w-2xs object-contain"
+          class="max-w-3xs object-contain"
         />
       </div>
 
@@ -48,7 +48,7 @@ const { tab, title, description, imageSrc, href, meta, bgClass = "bg-neutral-900
         </p>
 
         {meta && (
-          <span class="mt-6 block text-base text-neutral-500">
+          <span class="ibm-plex-mono-regular mt-6 block text-base text-neutral-500">
             {meta}
           </span>
         )}
