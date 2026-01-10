@@ -13,22 +13,68 @@ const { title, description } = Astro.props;
 
   <body class="antialiased">
     <!-- header -->
-    <header
-     class="sticky top-0 z-50 w-full
-         backdrop-blur"
->
-     <div class="mx-auto max-w-5xl px-6 pt-6 pb-4">
-    <div class="flex justify-between items-center">
-      <a href="/" class="ibm-plex-mono-bold text-2xl font-semibold">YC</a>
+    <header class="sticky top-0 z-50 w-full backdrop-blur">
+      <div class="mx-auto max-w-7xl px-6 pt-10 pb-1">
+        <div class="grid grid-cols-3 items-center">
+          <nav class="flex gap-14 text-lg justify-self">
+            <a href="/yuni" class="hover:text-pink-500 transition">Introduction</a>
+            <a href="/Yuni_Chun_Resume_5 (4).pdf" target="_blank" rel="noopener noreferrer" class="hover:text-pink-500 transition">Resume</a>
+          </nav>
+          <a href="/" class="text-2xl font-semibold justify-self-center">Yuni Chun</a>
+          <div class="relative justify-self-end">
+            <!-- Contact trigger -->
+            <button
+              id="contact-btn"
+              class="text-lg hover:text-pink-500 transition"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Contact
+            </button>
 
-      <nav class="flex gap-14 text-lg">
-        <a href="/yuni" class="hover:text-pink-500 transition">Introduction</a>
-        <a href="/contact" class="hover:text-pink-500 transition">Contact</a>
-        <a href="/Yuni_Chun_Resume_5 (4).pdf" target="_blank" rel="noopener noreferrer" class="hover:text-pink-500 transition">Resume</a>
-      </nav>
-    </div>
-  </div>
-</header>
+            <!-- Popover -->
+            <div
+              id="contact-popover"
+              class="absolute right-0 mt-3 w-72 rounded-xl border border-neutral-700
+                    bg-neutral-900/95 backdrop-blur shadow-lg p-4
+                    hidden"
+            >
+              <div class="space-y-3 text-sm">
+                <div class="flex items-center justify-between">
+                  <span class="text-neutral-400">Email</span>
+                  <button
+                    class="text-neutral-200 hover:text-pink-500 transition"
+                    data-copy="yc4802@barnard.edu"
+                  >
+                    Copy
+                  </button>
+                </div>
+
+                <p class="font-mono text-neutral-300">
+                  yc4802@barnard.edu
+                </p>
+
+                <div class="h-px bg-neutral-700 my-2"></div>
+
+                <div class="flex items-center justify-between">
+                  <span class="text-neutral-400">LinkedIn</span>
+                  <button
+                    class="text-neutral-200 hover:text-pink-500 transition"
+                    data-copy="https://www.linkedin.com/in/yunyoungchun"
+                  >
+                    Copy
+                  </button>
+                </div>
+
+                <p class="font-mono text-neutral-300 break-all">
+                  linkedin.com/in/yunyoungchun
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
 
 
     <slot />
@@ -44,5 +90,44 @@ const { title, description } = Astro.props;
         </div>
       </div>
     </footer>
+    <script>
+(() => {
+  const btn = document.getElementById("contact-btn");
+  const popover = document.getElementById("contact-popover");
+
+  if (!btn || !popover) return;
+
+  btn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const isOpen = !popover.classList.contains("hidden");
+    popover.classList.toggle("hidden", isOpen);
+    btn.setAttribute("aria-expanded", String(!isOpen));
+  });
+
+  document.addEventListener("click", () => {
+    popover.classList.add("hidden");
+    btn.setAttribute("aria-expanded", "false");
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      popover.classList.add("hidden");
+      btn.setAttribute("aria-expanded", "false");
+    }
+  });
+
+  document.querySelectorAll<HTMLElement>("[data-copy]").forEach((el) => {
+    const value = el.dataset.copy;
+    if (!value) return;
+
+    el.addEventListener("click", () => {
+      navigator.clipboard.writeText(value);
+      el.textContent = "Copied!";
+      setTimeout(() => (el.textContent = "Copy"), 1200);
+    });
+  });
+})();
+</script>
+
   </body>
 </html>
