@@ -3,59 +3,57 @@ import BaseLayout from "../layouts/baselayout.astro";
 ---
 
 <BaseLayout title="FlashGrub Case Study">
-  <main class="mx-auto font-light max-w-3xl px-6 py-24 space-y-20">
+  <main class="mx-auto font-light max-w-5xl px-6 py-24 space-y-12">
 
     <!-- Header -->
     <section class="space-y-6">
-      <h1 class="text-5xl font-semibold leading-tight">
+      <h1 class="text-5xl font-semibold text-neutral-400 leading-tight">
         FlashGrub
       </h1>
 
-      <p class="text-xl text-neutral-400 leading-relaxed">
+      <p class="text-3xl font-medium leading-relaxed">
         Clarifying a concept-dense product through iterative, user-driven app design.
       </p>
 
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-6 text-sm">
         <div>
           <p class="uppercase tracking-wide text-neutral-500">Role</p>
-          <p class="mt-1 text-neutral-200">Lead Product & Operations Intern</p>
+          <p class="mt-1 text-neutral-200 ibm-plex-mono-regular">Product & Operations</p>
         </div>
         <div>
           <p class="uppercase tracking-wide text-neutral-500">Timeline</p>
-          <p class="mt-1 text-neutral-200">Fall 2025 – Present</p>
+          <p class="mt-1 text-neutral-200 ibm-plex-mono-regular">September 2025 – Present</p>
         </div>
         <div>
           <p class="uppercase tracking-wide text-neutral-500">Team</p>
-          <p class="mt-1 text-neutral-200">
-            Solo contributor <br />
-            <span class="text-neutral-400">(weekly check-ins with Founder & CEO)</span>
+          <p class="mt-1 text-neutral-200 ibm-plex-mono-regular">
+            Solo contributor
+            <span class="text-neutral-400">(report to CEO)</span>
           </p>
         </div>
       </div>
     </section>
 
+<!-- NDA -->
+    <section class="border border-neutral-800 rounded-lg p-6 text-sm text-neutral-400">
+      <strong class="text-neutral-300">NDA Notice</strong><br />
+      Due to confidentiality agreements, detailed designs and implementation
+      specifics are not shown. I’m happy to discuss my process, decision-making, and learnings
+      in more detail in conversation.
+    </section>
+
     <!-- Context -->
     <section class="space-y-6">
-      <h2 class="text-2xl font-semibold">Context</h2>
+      <h2 class="text-2xl font-semibold">Challenge</h2>
       <p class="text-neutral-300 leading-relaxed">
         FlashGrub is a pre-launch 
         <span class ="font-black">mobile app that connects users to local restaurants and markets that have surplus food. </span> 
         It sells pre-made meals and unsold food at a discount, reducing waste and supporting families in
         accessing affordable meals.
       </p>
-      <p class="text-neutral-300 leading-relaxed">
-        As a Lead Product and Operations Intern, I work closely with the founder to iterate
-        on the app experience and prepare it for launch, focusing on helping users understand FlashGrub’s value
-        proposition and navigate a product that blends the functionality of traditional marketplace and subscription apps.
-      </p>
-    </section>
 
-    <!-- Challenge -->
-    <section class="space-y-6">
-      <h2 class="text-2xl font-semibold">Challenge</h2>
       <p class="text-neutral-300 leading-relaxed">
-        As both a subscription service and a pay-as-you-go discount app, FlashGrub is
-        concept-dense and difficult to communicate clearly to first-time users, who struggled with:
+        As both a subscription service and a pay-as-you-go discount app, first-time users struggled with:
       </p>
 
       <ul class="list-disc list-inside text-neutral-300 space-y-2">
@@ -74,10 +72,13 @@ import BaseLayout from "../layouts/baselayout.astro";
         <span class ="font-black">making
         a complex idea feel intuitive within just a few screens. </span>
       </p>
+
+
     </section>
 
     <!-- HMW -->
-    <section class="space-y-6">
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <div class="space-y-4">
       <h2 class="text-2xl font-semibold">How Might We...</h2>
       <ul class="space-y-4 text-neutral-300">
         <li>
@@ -91,13 +92,25 @@ import BaseLayout from "../layouts/baselayout.astro";
           ...guide users toward meaningful actions while still allowing free exploration?
         </li>
       </ul>
+      </div>
+      <div class="space-y-4">
+        <h2 class="text-2xl font-semibold">Qualitative Outcomes</h2>
+        <ul class="list-disc list-inside text-neutral-300 space-y-2">
+        <li>The app became more informative and easier to understand for first-time users</li>
+        <li>User testing showed improved comprehension of FlashGrub’s concept</li>
+        <li>The subscription offering was communicated more clearly and confidently</li>
+        <li>Abstract ideas were translated into concrete, testable product decisions</li>
+        </ul>
+      </div>
     </section>
 
     <!-- Role -->
     <section class="space-y-6">
       <h2 class="text-2xl font-semibold">My Role</h2>
       <p class="text-neutral-300 leading-relaxed">
-        I worked independently, owning the end-to-end iteration process while checking in
+        As a Lead Product and Operations Intern, I work closely with the founder to iterate
+        on the app experience and prepare it for launch, focusing on helping users understand FlashGrub’s value
+        proposition and navigate a product that blends the functionality of traditional marketplace and subscription apps. I worked independently, owning the end-to-end iteration process while checking in
         weekly with the founder to review findings, challenge assumptions, and align on next steps. My process consists of:
       </p>
 
@@ -132,31 +145,6 @@ import BaseLayout from "../layouts/baselayout.astro";
       </ul>
     </section>
 
-    <!-- Stakeholders -->
-    <section class="space-y-6">
-      <h2 class="text-2xl font-semibold">Navigating Feedback & Stakeholder Discussion</h2>
-      <p class="text-neutral-300 leading-relaxed">
-        While working solo, I collaborated closely with the founder through weekly discussions.
-        When our perspectives differed, she pushed me to support ideas with concrete user
-        testing insights rather than personal preference.
-      </p>
-      <p class="text-neutral-300 leading-relaxed">
-        This feedback loop sharpened my product thinking — decisions were grounded in observed
-        behavior, and iteration became more focused and defensible.
-      </p>
-    </section>
-
-    <!-- Outcomes -->
-    <section class="space-y-6">
-      <h2 class="text-2xl font-semibold">Qualitative Outcomes</h2>
-      <ul class="list-disc list-inside text-neutral-300 space-y-2">
-        <li>The app became more informative and easier to understand for first-time users</li>
-        <li>User testing showed improved comprehension of FlashGrub’s concept</li>
-        <li>The subscription offering was communicated more clearly and confidently</li>
-        <li>Abstract ideas were translated into concrete, testable product decisions</li>
-      </ul>
-    </section>
-
     <!-- Reflection -->
     <section class="space-y-6">
       <h2 class="text-2xl font-semibold">Reflections & Learnings</h2>
@@ -166,26 +154,12 @@ import BaseLayout from "../layouts/baselayout.astro";
         toward next steps without making those paths feel forced.
       </p>
       <p class="text-neutral-300 leading-relaxed">
-        This experience fundamentally changed how I evaluate and design digital products.
+        Furthermore, continually engaging in feedback loops sharpened my product thinking — decisions were grounded in observed
+        behavior, and iteration became more focused and defensible.
       </p>
     </section>
 
-    <!-- Looking Forward -->
-    <section class="space-y-6">
-      <h2 class="text-2xl font-semibold">Looking Forward</h2>
-      <p class="text-neutral-300 leading-relaxed">
-        With additional time, I would continue refining how the subscription model is introduced,
-        focusing on helping users understand its value earlier and more intuitively.
-      </p>
-    </section>
-
-    <!-- NDA -->
-    <section class="border border-neutral-800 rounded-lg p-6 text-sm text-neutral-400">
-      <strong class="text-neutral-300">NDA Notice</strong><br />
-      Due to confidentiality agreements, detailed designs, internal metrics, and implementation
-      specifics are not shown. I’m happy to discuss my process, decision-making, and learnings
-      in more detail in conversation.
-    </section>
+    
 
   </main>
 </BaseLayout>
