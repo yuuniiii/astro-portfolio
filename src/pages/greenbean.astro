@@ -3,39 +3,36 @@ import BaseLayout from "../layouts/baselayout.astro";
 ---
 
 <BaseLayout title="Green Bean Ordering Case Study">
-  <main class="mx-auto max-w-3xl px-6 py-24 space-y-20">
+  <main class="mx-auto max-w-5xl px-6 py-24 space-y-12">
 
     <!-- Header -->
     <section class="space-y-6">
-      <p class="text-sm uppercase tracking-wide text-neutral-500">
-        Case Study · Human-Computer Interaction
-      </p>
 
-      <h1 class="text-5xl font-semibold leading-tight">
-        Green Bean Online Ordering
+      <h1 class="text-5xl font-semibold text-neutral-400 leading-tight">
+        Green Bean Online Order Site
       </h1>
 
-      <p class="text-xl text-neutral-400 leading-relaxed">
+      <p class="text-3xl leading-relaxed">
         Designing a fast, low-friction ordering experience for a student-run campus café.
       </p>
 
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-6 text-sm">
         <div>
           <p class="uppercase tracking-wide text-neutral-500">Role</p>
-          <p class="mt-1 text-neutral-200">
-            Product Designer & Researcher <span class="text-neutral-400">(team of 3)</span>
+          <p class="mt-1 text-neutral-200 ibm-plex-mono-regular">
+            Product Designer
           </p>
         </div>
 
         <div>
           <p class="uppercase tracking-wide text-neutral-500">Timeline</p>
-          <p class="mt-1 text-neutral-200">Academic term project</p>
+          <p class="mt-1 text-neutral-200 ibm-plex-mono-regular">2 weeks</p>
         </div>
 
         <div>
-          <p class="uppercase tracking-wide text-neutral-500">Focus</p>
-          <p class="mt-1 text-neutral-200">
-            User flows, efficiency, usability testing
+          <p class="uppercase tracking-wide text-neutral-500">Team</p>
+          <p class="mt-1 text-neutral-200 ibm-plex-mono-regular">
+            3 designers
           </p>
         </div>
       </div>
@@ -49,7 +46,7 @@ import BaseLayout from "../layouts/baselayout.astro";
         <img
           src="/images/green-bean-mapping.png"
           alt="Early UX mapping and inspiration board for Green Bean online ordering"
-          class="w-full rounded-xl border border-neutral-800"
+          class="max-w-xl rounded-xl border border-neutral-800"
           loading="lazy"
         />
         <figcaption class="text-sm text-neutral-500">
@@ -205,14 +202,6 @@ import BaseLayout from "../layouts/baselayout.astro";
         on goals and user experience can make later design decisions more focused and
         defensible.
       </p>
-    </section>
-
-    <!-- Footer -->
-    <section class="border border-neutral-800 rounded-lg p-6 text-sm text-neutral-400">
-      <strong class="text-neutral-300">Note</strong><br />
-      This project was completed as part of a Human-Computer Interaction course and focuses
-      on interaction design, usability, and user-centered thinking rather than production
-      implementation.
     </section>
 
   </main>
