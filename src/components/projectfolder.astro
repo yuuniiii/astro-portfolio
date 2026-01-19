@@ -2,9 +2,10 @@
 const { tab, title, description, imageSrc, href, meta, bgClass = "bg-neutral-900", borderClass = "border-neutral-700", style = "" } = Astro.props;
 ---
 
+<!-- top-27 = distance folder sticks from the top -->
 <a 
     href={href} 
-    class="block group relative sticky top-24"
+    class="block group relative sticky top-27"
     style={style}>
   <!-- Tab -->
   <div class="absolute -top-5 left-10 z-10">
