@@ -3,7 +3,7 @@ import BaseLayout from "../layouts/baselayout.astro";
 ---
 
 <BaseLayout title="Green Bean Ordering Case Study">
-  <main class="mx-auto max-w-5xl px-6 py-24 space-y-12">
+  <main class="mx-auto font-light max-w-3xl px-6 py-24 space-y-12">
 
     <!-- Header -->
     <section class="space-y-6">
@@ -39,77 +39,92 @@ import BaseLayout from "../layouts/baselayout.astro";
     </section>
 
     <!-- Prototype Screenshots -->
-<section class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<section class="flex justify-center gap-6">
   <img
     src="/images/gb-prot-2.png"
     alt="Early Green Bean ordering flow sketch"
-    class="max-w-md"
+    class="max-w-3xs"
     loading="lazy"
   />
   <img
     src="/images/gb-prot-1.png"
     alt="Green Bean inspiration and UI references"
-    class="max-w-md"
+    class="max-w-3xs"
     loading="lazy"
   />
 </section>
 
-    <!-- Brainstorming -->
-    <section class="space-y-4">
-      <h2 class="text-2xl font-semibold">Early Mapping & Concept Development</h2>
-
-      <figure class="space-y-2">
-        <img
-          src="/images/green-bean-mapping.png"
-          alt="Early UX mapping and inspiration board for Green Bean online ordering"
-          class="max-w-xl rounded-xl border border-neutral-800"
-          loading="lazy"
-        />
-        <figcaption class="text-sm text-neutral-500">
-          Day-one mapping: goals, inspiration, user feelings, and system constraints.
-        </figcaption>
-      </figure>
-    </section>
-
     <!-- Context -->
     <section class="space-y-6">
-      <h2 class="text-2xl font-semibold">Context</h2>
+      <h2 class="text-2xl font-semibold">Challenge</h2>
       <p class="text-neutral-300 leading-relaxed">
-        Green Bean is a student-run coffee lounge on campus with high foot traffic during
-        peak hours. Long lines and limited staffing often created bottlenecks, increasing
-        wait times and reducing the quality of the in-person experience.
+        The Green Bean is a student-run coffee lounge on campus with high foot traffic and long lines during
+        peak hours. Long lines and only one register make the experience of ordering and waiting for a coffee extremely inefficient.
       </p>
       <p class="text-neutral-300 leading-relaxed">
-        Our goal was to design an online ordering experience that allowed students to order
-        drinks in advance, see wait times, and reduce congestion at the register — without
-        disrupting Green Bean’s identity as a community-focused space.
+        Our goal was to design an 
+        <span class ="font-black">online ordering platform that allowed students to order
+        drinks in advance, see wait times, and reduce congestion at the register
+        </span>
+         — without
+        disrupting the Green Bean’s identity as a community-focused space.
       </p>
     </section>
 
-    <!-- Problem -->
-    <section class="space-y-6">
-      <h2 class="text-2xl font-semibold">Problem Statement</h2>
-      <p class="text-neutral-300 leading-relaxed">
-        How might we enable students to order drinks quickly and confidently, while reducing
-        operational strain on a small, student-run café?
-      </p>
-
-      <ul class="list-disc list-inside text-neutral-300 space-y-2">
-        <li>Peak-hour lines slow down service and frustrate customers</li>
-        <li>Drink customization can be time-consuming at the register</li>
-        <li>Staff are split between taking orders and making drinks</li>
-        <li>Existing solutions risk feeling impersonal or overly complex</li>
-      </ul>
+    <!-- HMW -->
+     <section class="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <div class="space-y-4">
+        <h2 class="text-2xl font-semibold">How might we...</h2>
+        <ul class="space-y-4 text-neutral-300">
+          <li>...develop a system that makes peak-hour lines less frustrating and more efficient?</li>
+        <li>...build a platform that makes menu exploration easier and more joyful?</li>
+        <li>...create a solution that feels neither overly complex nor impersonal?</li>
+        </ul>
+      </div>
+      <div class="space-y-4">
+        <h2 class="text-2xl font-semibold">Qualitative Outcomes</h2>
+        <ul class="list-disc list-inside text-neutral-300 space-y-2">
+        <li>The final prototype demonstrates a streamlined ordering experience</li>
+        <li>Allows students to order ahead and skip long lines</li>
+        <li>Reduces pressure on staff during peak hours</li>
+        <li>Keeps the experience aligned with the Green Bean’s campus identity</li>
+        </ul>
+      </div>
     </section>
+
+<!-- Mapping + Research + Process -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-12">
+
+  <!-- Left column: Early Mapping -->
+  <div class="space-y-4">
+    <h2 class="text-2xl font-semibold">Early Mapping & Concept Development</h2>
+
+    <figure class="space-y-2">
+      <img
+        src="/images/green-bean-mapping.png"
+        alt="Early UX mapping and inspiration board for Green Bean online ordering"
+        class="max-w-full rounded-xl border border-neutral-800"
+        loading="lazy"
+      />
+      <figcaption class="text-sm text-neutral-500">
+        Day-one mapping: goals, inspiration, user feelings, and system constraints.
+      </figcaption>
+    </figure>
+  </div>
+
+  <!-- Right column: Research + Process -->
+  <div class="space-y-12">
 
     <!-- Research -->
-    <section class="space-y-6">
+    <div class="space-y-6">
       <h2 class="text-2xl font-semibold">Research & Inspiration</h2>
+
       <p class="text-neutral-300 leading-relaxed">
         As a group, we analyzed existing ordering flows from platforms like Starbucks,
-        Dunkin’, and Blue Bottle to understand how large systems handle speed, customization,
-        and visual clarity.
+        Dunkin’, and Blue Bottle to understand how large systems handle speed,
+        customization, and visual clarity.
       </p>
+
       <p class="text-neutral-300 leading-relaxed">
         We paid particular attention to:
       </p>
@@ -117,22 +132,18 @@ import BaseLayout from "../layouts/baselayout.astro";
       <ul class="list-disc list-inside text-neutral-300 space-y-2">
         <li>How featured drinks are surfaced to reduce decision fatigue</li>
         <li>How customization options are revealed progressively</li>
-        <li>Where users hesitate or abandon the flow</li>
+        <li>How users hesitate or abandon the flow</li>
       </ul>
-
-      <p class="text-neutral-300 leading-relaxed">
-        These references helped us identify patterns worth adapting — while keeping the
-        scale and culture of a student café in mind.
-      </p>
-    </section>
+    </div>
 
     <!-- Process -->
-    <section class="space-y-6">
+    <div class="space-y-6">
       <h2 class="text-2xl font-semibold">Process</h2>
+
       <p class="text-neutral-300 leading-relaxed">
         We began with collaborative mapping sessions to define goals, constraints, and
         desired user feelings. Rather than jumping straight into screens, we focused on
-        aligning around what the interaction should *feel* like.
+        aligning around what the interaction should <em>feel</em> like.
       </p>
 
       <ul class="list-disc list-inside text-neutral-300 space-y-2">
@@ -141,7 +152,11 @@ import BaseLayout from "../layouts/baselayout.astro";
         <li>Sketched low-fidelity flows before moving into Figma</li>
         <li>Iterated on layouts to reduce steps and unnecessary choices</li>
       </ul>
-    </section>
+    </div>
+
+  </div>
+</section>
+
 
     <!-- Design Decisions -->
     <section class="space-y-10">
@@ -193,20 +208,6 @@ import BaseLayout from "../layouts/baselayout.astro";
         Based on feedback, we simplified language, reduced the number of visible options at
         once, and clarified call-to-action buttons.
       </p>
-    </section>
-
-    <!-- Outcome -->
-    <section class="space-y-6">
-      <h2 class="text-2xl font-semibold">Outcome</h2>
-      <p class="text-neutral-300 leading-relaxed">
-        The final prototype demonstrates a streamlined ordering experience that:
-      </p>
-
-      <ul class="list-disc list-inside text-neutral-300 space-y-2">
-        <li>Allows students to order ahead and skip long lines</li>
-        <li>Reduces pressure on staff during peak hours</li>
-        <li>Keeps the experience aligned with Green Bean’s campus identity</li>
-      </ul>
     </section>
 
     <!-- Reflection -->
